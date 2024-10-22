@@ -10,7 +10,7 @@ class Mine : public GameEntity{
     Explosion explode(){
         Explosion a(std::get<0>(position), std::get<1>(position));
         a.setType('N');
-        std::cout << "exploded" << std::endl;
+        //std::cout << "exploded" << std::endl;
         return a;
 
     }

@@ -11,7 +11,7 @@ class Explosion : public GameEntity, public Effect{
         void apply(GameEntity& entity) override{
             entity.setPosition(-1, -1);
             entity.setType('N');
-            std::cout << "apply" << std::endl;
+            //std::cout << "apply" << std::endl;
         } 
 };
 

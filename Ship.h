@@ -10,7 +10,7 @@ class Ship : public GameEntity{
             int x = std::get<0>(position) + dx; 
             int y = std::get<1>(position) + dy;
             setPosition(x, y);
-            std::cout << "moved" << std::endl;
+            //std::cout << "moved" << std::endl;
         }
         Ship(int x, int y) : GameEntity(x, y, 'S'){}
 };
