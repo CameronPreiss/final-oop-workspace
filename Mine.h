@@ -8,9 +8,8 @@
 class Mine : public GameEntity{
     public:
     Explosion explode(){
-        Explosion explosion(std::get<0>(position), std::get<1>(position));
-        explosion.apply(*this);
-        return explosion;
+        type = GameEntityType::NoneType;
+        return Explosion(std::get<0>(position), std::get<1>(position));
     }
     Mine(int x, int y) : GameEntity(x, y, 'M'){}
 };

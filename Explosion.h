@@ -9,8 +9,7 @@ class Explosion : public GameEntity, public Effect{
     public:
         Explosion(int x, int y) : GameEntity(x, y, 'E'), Effect(){};
         void apply(GameEntity& entity) override{
-            entity.position = std::make_tuple(-1,-1);
-            entity.setType('N');
+            entity = GameEntity(-1, -1, 'N');
         } 
 };
 
