@@ -4,11 +4,11 @@
 #include <cmath>
 #include <tuple>
 
-enum GameEntityType : char{
-    ExplosionType,
-    MineType,
-    NoneType,
-    ShipType
+enum GameEntityType : char {
+    NoneType = 0,
+    ShipType = 1,
+    ExplosionType = 2,
+    MineType = 3
 };
 
 class GameEntity{
