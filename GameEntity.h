@@ -39,6 +39,22 @@ class GameEntity{
             return type;
         }
         virtual ~GameEntity() {}
+        void setType(char type) {
+        switch (type) {
+            case 'E':
+                this->type = GameEntityType::ExplosionType;
+                break;
+            case 'M':
+                this->type = GameEntityType::MineType;
+                break;
+            case 'N':
+                this->type = GameEntityType::NoneType;
+                break;
+            case 'S':
+                this->type = GameEntityType::ShipType;
+                break;
+    }
+  }
 };
 
 #endif
