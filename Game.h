@@ -24,6 +24,8 @@ class Game{
             return entities;
         }
         void gameLoop(int maxIterations, double mineDistanceThreshold){
+            int count = 0;
+            while (count <= maxIterations && everyShipDestroyed == false){
             for (auto* entity : entities) {
                 if (Ship* ship = dynamic_cast<Ship*>(entity)) {
                     ship->move(1, 0);
@@ -53,6 +55,8 @@ class Game{
 
             if (everyShipDestroyed){
                 std::cout << "Game Over Lumplard" << std::endl;
+            }
+            count++;
             }
         }
 
