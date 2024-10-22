@@ -4,7 +4,7 @@
 #include <cmath>
 #include <tuple>
 
-enum GameEntityType{
+enum GameEntityType : char{
     ExplosionType,
     MineType,
     NoneType,

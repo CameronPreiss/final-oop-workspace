@@ -12,4 +12,6 @@ int main(){
 
     Explosion c(3,3);
     c.apply(a);
+
+    std::cout << c.getType() << std::endl;
 }
