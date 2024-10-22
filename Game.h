@@ -53,9 +53,6 @@ class Game{
                 }
             }
 
-            if (everyShipDestroyed){
-                std::cout << "Game Over Lumplard" << std::endl;
-            }
             count++;
             }
         }
