@@ -19,16 +19,16 @@ class GameEntity{
             position = std::make_tuple(x,y);
             switch(type){
                 case 'E':
-                    type = ExplosionType;
+                    type = 0;
                     break;
                 case 'M':
-                    type = MineType;
+                    type = 1;
                     break;
                 case 'S':
-                    type = ShipType;
+                    type = 2;
                     break;  
                 default:
-                    type = NoneType;   
+                    type = 3;   
                     break;                               
             }
         }
@@ -42,16 +42,16 @@ class GameEntity{
         void setType(char type) {
         switch (type) {
             case 'E':
-                this->type = GameEntityType::ExplosionType;
+                this->type =0;
                 break;
             case 'M':
-                this->type = GameEntityType::MineType;
+                this->type = 1;
                 break;
             case 'N':
-                this->type = GameEntityType::NoneType;
+                this->type = 2;
                 break;
             case 'S':
-                this->type = GameEntityType::ShipType;
+                this->type = 3;
                 break;
             }
         }
