@@ -26,7 +26,6 @@ class GameEntity{
                     break;
                 case 'S':
                     this->type = GameEntityType::ShipType;
-                    std::cout << this->type << std::endl;
                     break;  
                 default:
                     this->type = GameEntityType::NoneType;   
