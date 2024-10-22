@@ -61,6 +61,14 @@ class Game{
                 delete entity;
             }
         }
+
+        std::vector<GameEntity*> get_entities(){
+            return entities;
+        }
+
+        void set_entities(std::vector<GameEntity*> entities){
+            this->entities = entities;
+        }
 };
 
 #endif
