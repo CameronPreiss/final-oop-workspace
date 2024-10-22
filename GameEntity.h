@@ -15,20 +15,21 @@ class GameEntity{
     public:
         std::tuple<int, int> position;
         GameEntityType type;
-        GameEntity(int x, int y, char type){
+        GameEntity(int x, int y, char tmpType){
             position = std::make_tuple(x,y);
-            switch(type){
+            switch(tmpType){
                 case 'E':
-                    type = ExplosionType;
+                    this->type = GameEntityType::ExplosionType;
                     break;
                 case 'M':
-                    type = MineType;
+                    this->type = GameEntityType::MineType;
                     break;
                 case 'S':
-                    type = ShipType;
+                    this->type = GameEntityType::ShipType;
+                    std::cout << this->type << std::endl;
                     break;  
                 default:
-                    type = NoneType;   
+                    this->type = GameEntityType::NoneType;   
                     break;                               
             }
         }
@@ -38,6 +39,7 @@ class GameEntity{
         GameEntityType getType(){
             return type;
         }
+
         virtual ~GameEntity() {}
         void setType(char type) {
         switch (type) {
