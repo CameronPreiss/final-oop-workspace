@@ -53,8 +53,12 @@ class GameEntity{
             case 'S':
                 this->type = GameEntityType::ShipType;
                 break;
-    }
-  }
+            }
+        }
+        void setPosition(int x, int y){
+            std::tuple<int, int> posNew = {x,y};
+            this->position = posNew;
+        }
 };
 
 #endif

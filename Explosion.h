@@ -9,7 +9,8 @@ class Explosion : public GameEntity, public Effect{
     public:
         Explosion(int x, int y) : GameEntity(x, y, 'E'), Effect(){};
         void apply(GameEntity& entity) override{
-            entity = GameEntity(-1, -1, 'N');
+            entity.setPosition(-1, -1);
+            entity.setType('N');
         } 
 };
 

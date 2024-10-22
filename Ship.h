@@ -9,7 +9,7 @@ class Ship : public GameEntity{
         void move(int dx, int dy){
             int x = std::get<0>(position) + dx; 
             int y = std::get<1>(position) + dy;
-            position = std::make_tuple(x, y);
+            setPosition(x, y);
         }
         Ship(int x, int y) : GameEntity(x, y, 'S'){}
 };
