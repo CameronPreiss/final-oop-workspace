@@ -24,6 +24,7 @@ class Game{
             return entities;
         }
         void gameLoop(int maxIterations, double mineDistanceThreshold){
+            bool everyShipDestroyed = false;
             int count = 0;
             while (count <= maxIterations && everyShipDestroyed == false){
             for (auto* entity : entities) {
