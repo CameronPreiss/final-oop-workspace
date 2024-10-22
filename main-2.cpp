@@ -7,8 +7,8 @@ int main(){
     Ship a(1,2);
     Mine b(4,6);
 
-    Explosion c = b.explode();
-    c.apply(a);
+    //Explosion c = b.explode();
+    //c.apply(a);
 
     std::cout << a.getType() << std::endl;
 }
