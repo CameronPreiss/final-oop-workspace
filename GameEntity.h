@@ -22,10 +22,10 @@ class GameEntity{
                     type = ExplosionType;
                     break;
                 case 'M':
-                    type = ExplosionType;
+                    type = MineType;
                     break;
                 case 'S':
-                    type = ExplosionType;
+                    type = ShipType;
                     break;  
                 default:
                     type = NoneType;   
