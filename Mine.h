@@ -13,7 +13,7 @@ class Mine : public GameEntity{
             setType('N');
             return a;
         }
-        Mine(int x, int y) : GameEntity(x,y,'E') {}
+        Mine(int x, int y) : GameEntity(x,y,'M') {}
 };
 
 #endif
