@@ -24,8 +24,8 @@ class Game{
             Robot a(width, height);
             Goal b(width-1, height-1);
             Obstacle c(1,2, width, height);
-            Obstacle d(3,4);
-            Obstacle e(6,2);
+            Obstacle d(3,4, width, height);
+            Obstacle e(6,2, width, height);
             GameState::PLAYING;
         }
         bool displayState(){
