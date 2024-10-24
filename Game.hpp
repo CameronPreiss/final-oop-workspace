@@ -18,6 +18,7 @@ class Game{
         int width;
         int height;
         std::vector<std::pair<int,int>> obstacleCoordinates;
+        GameState winState;
         Game(int width, int height, std::vector<std::pair<int,int>> obstacleCoordinates){
             this->width = width;
             this->height = height;
@@ -26,20 +27,20 @@ class Game{
             Obstacle c(1,2, width, height);
             Obstacle d(3,4, width, height);
             Obstacle e(6,2, width, height);
-            GameState::PLAYING;
+            winState = GameState::PLAYING;
         }
         bool displayState(){
-            if (GameState::WIN){
+            if (winState = GameState::WIN){
                 std::cout << "You win!" << std::endl;
                 return true;
    
             }
-            if (GameState::LOSE){
+            if (winState = GameState::LOSE){
                 std::cout << "You win!" << std::endl;
                 return true;
  
             }
-            if (GameState::PLAYING){
+            if (winState = GameState::PLAYING){
                 std::cout << "Game on" << std::endl;
                 return false;
             }
