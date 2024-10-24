@@ -49,7 +49,7 @@ class Game{
                         }
                     }
                 }
-                }
+                //}
             }
             std::cout << "oi" << std::endl;
             bool shipsGone = true;
