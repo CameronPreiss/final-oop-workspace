@@ -15,13 +15,15 @@ enum GameState{
 
 class Game{
     public:
+        int width;
+        int height;
         std::vector<std::pair<int,int>> obstacleCoordinates;
         Game(int width, int height, std::vector<std::pair<int,int>> obstacleCoordinates){
             this->width = width;
             this->height = height;
             Robot a(width, height);
             Goal b(width-1, height-1);
-            Obstacle c(1,2);
+            Obstacle c(1,2, width, height);
             Obstacle d(3,4);
             Obstacle e(6,2);
             GameState::PLAYING;
@@ -47,6 +49,6 @@ class Game{
             }
         }
 
-}
+};
 
 #endif
