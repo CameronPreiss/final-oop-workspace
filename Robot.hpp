@@ -11,6 +11,9 @@ class Robot : public GridItem{
             health = 3;
         }
         int getHealth(){
+            if (health < 0){
+                health = 0;
+            }
             return health;
         }
         void takeHit(){
