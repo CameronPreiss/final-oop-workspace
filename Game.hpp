@@ -5,6 +5,7 @@
 #include "Goal.hpp"
 #include "Robot.hpp"
 #include "Obstacle.hpp"
+#include <vector>
 
 enum GameState{
     WIN = 0,
@@ -39,7 +40,13 @@ class Game{
 
             }
         }
-        
+        void movePlayer(int dx, int dy){
+            a.move(dx,dy);
+            if (GameState::PLAYING){
+
+            }
+        }
+
 }
 
 #endif
