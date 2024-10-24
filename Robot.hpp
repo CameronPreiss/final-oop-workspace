@@ -23,7 +23,7 @@ class Robot : public GridItem{
             if (xOffset == 0 || yOffset == 0){
                 int x = std::get<0>(coordinates) + xOffset;
                 int y = std::get<1>(coordinates) + yOffset;
-                if (x > gridWidth || x <0 || y >gridHeight || y<0){
+                if (x > width || x <0 || y >height || y<0){
                     return false;
                 }
                 coordinates = std::make_pair(x,y);
