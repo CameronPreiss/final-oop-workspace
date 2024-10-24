@@ -31,38 +31,46 @@ class Game{
         while (count <= maxIterations && everyShipDestroyed == false){
             std::cout << "iteration no. " << count << std::endl;
             for (auto* entity : get_entities()){
-                if (Ship* ship = dynamic_cast<Ship*>(entity)){
+                Ship* ship = (Ship*) entity;
+                //if (Ship* ship = dynamic_cast<Ship*>(entity)){
                     ship->move(1,0);
-                }
+                //}
             }
+            everyShipDestroyed = true;
             for (auto* entity : get_entities()){
-                if (Ship* ship = dynamic_cast<Ship*>(entity)){
+                Ship* ship = (Ship*) entity;
+                //if (Ship* ship = dynamic_cast<Ship*>(entity)){
                 if (ship->getType() == GameEntityType::ShipType){
+                    everyShipDestroyed = false;
                     for (auto* entity1 : get_entities()){
-                        if (Mine* mine = dynamic_cast<Mine*>(entity1)){
+                        Mine* mine = (Mine*) entity1;
+                        //if (Mine* mine = dynamic_cast<Mine*>(entity1)){
                             double dist = Utils::calculateDistance(mine->getPos(), ship->getPos());
                             if (dist <= mineDistanceThreshold && mine->getType() != NoneType){
                                 Explosion explosion = mine->explode();
                                 explosion.apply(*ship);
                                 std::cout << "Mine exploded " << std::endl;
                             }
-                        }
+                        //}
                     }
                 }
                 //}
             }
             std::cout << "oi" << std::endl;
-            bool shipsGone = true;
+            /*
+            bool everyShipDestroyed = true;
             for (auto* entity : get_entities()){
-                if (Ship* ship = dynamic_cast<Ship*>(entity)){
+                Ship* ship = (Ship*) entity;
+                //if (Ship* ship = dynamic_cast<Ship*>(entity)){
                 if (ship->getType() == GameEntityType::ShipType){
-                    shipsGone = false;
+                    everyShipDestroyed = false;
                 }
-                }
+                //}
             }
-            if (shipsGone == true){
-                everyShipDestroyed = true;
-            }
+            //if (shipsGone == true){
+            //    everyShipDestroyed = true;
+            //}
+            */
             count++;
         }
         std::cout << "Game ended" << std::endl;
