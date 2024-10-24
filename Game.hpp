@@ -18,7 +18,28 @@ class Game{
         Game(int width, int height, std::vector<std::pair<int,int>> obstacleCoordinates){
             this->width = width;
             this->height = height;
+            Robot a(width, height);
+            Goal b(width-1, height-1);
+            Obstacle c(1,2);
+            Obstacle d(3,4);
+            Obstacle e(6,2);
+            GameState::PLAYING;
         }
+        bool displayState(){
+            switch (GameState){
+                case GameState::WIN :
+                    std::cout << "You win!" << std::endl;
+                    break;
+                case GameState::LOSE :
+                    std::cout << "You lose :(" << std::endl;
+                    break;
+                case GameState::PLAYING :
+                    std::cout << "Game on" << std::endl;
+                    break;
+
+            }
+        }
+        
 }
 
 #endif
