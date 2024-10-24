@@ -11,7 +11,7 @@ enum GameState{
     WIN = 0,
     LOSE = 1,
     PLAYING = 2
-}
+};
 
 class Game{
     public:
@@ -29,21 +29,23 @@ class Game{
             GameState::PLAYING;
         }
         bool displayState(){
-            switch (GameState){
-                case GameState::WIN :
-                    std::cout << "You win!" << std::endl;
-                    break;
-                case GameState::LOSE :
-                    std::cout << "You lose :(" << std::endl;
-                    break;
-                case GameState::PLAYING :
-                    std::cout << "Game on" << std::endl;
-                    break;
-
+            if (GameState::WIN){
+                std::cout << "You win!" << std::endl;
+                return true;
+   
+            }
+            if (GameState::LOSE){
+                std::cout << "You win!" << std::endl;
+                return true;
+ 
+            }
+            if (GameState::PLAYING){
+                std::cout << "Game on" << std::endl;
+                return false;
             }
         }
         void movePlayer(int dx, int dy){
-            a.move(dx,dy);
+            //Robot->move(dx,dy);
             if (GameState::PLAYING){
 
             }
