@@ -21,7 +21,7 @@ class Robot : public GridItem{
         }
         bool move(int xOffset, int yOffset){
             if (xOffset == 0 || yOffset == 0){
-                if (x+xOffset <= width || x+xOffset >= 0 || y+yOffset <= height || y+yOffset >= 0){
+                if (std::get<0>(coordinates)+xOffset <= width || std::get<0>(coordinates)+xOffset >= 0 || std::get<1>(coordinates)+yOffset <= height || std::get<1>(coordinates)+yOffset >= 0){
                 int x = std::get<0>(coordinates) + xOffset;
                 int y = std::get<1>(coordinates) + yOffset;
                 coordinates = std::make_pair(x,y);
