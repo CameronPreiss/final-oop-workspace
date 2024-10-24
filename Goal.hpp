@@ -11,7 +11,7 @@ class Goal : public Interactable{
         Goal(int width, int height){
             this->width = width;
             this->height = height;
-            coordinates = std::make_pair(width, height);
+            coordinates = std::make_pair(width -1, height -1);
         }
         bool interact(Robot* player) override{
             if (Helper::euclideanDistance(getCoordinates(), player->getCoordinates()) == 0){
