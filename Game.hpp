@@ -46,10 +46,10 @@ class Game{
             }
         }
         void movePlayer(int dx, int dy){
-            Robot a(1,2);
-            a.move(dx,dy);
+            //Robot a(1,2);
+            //a.move(dx,dy);
             if (GameState::PLAYING){
-
+                if G
             }
         }
 
